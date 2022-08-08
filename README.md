@@ -1,13 +1,13 @@
 # Entry React Development Test
 ## by Dmytro Semenenko
 
-## Link to completed project
+###### Link to completed project
 [PROJECT LINK](https://dmytrosmnnk.github.io/entry-react-dev-test/)
 
-## GraphQL endpoint
+###### GraphQL endpoint
 [ENDPOINT](https://github.com/scandiweb/junior-react-endpoint)
 
-## Site design requirements
+###### Site design requirements
 [DESIGN](https://www.figma.com/file/MSyCAqVy1UgNap0pvqH6H3/Junior-Frontend-Test-Designs-(Public)?node-id=0%3A1)
 
 ---
