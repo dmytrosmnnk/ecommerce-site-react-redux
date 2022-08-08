@@ -1,0 +1,185 @@
+.MiniCart {
+  position: absolute;
+  top: 75px;
+  right: -28px;
+  z-index: 2;
+  width: 325px;
+  max-height: 680px;
+  background-color: #fff;
+  padding: 32px 16px;
+  overflow: auto;
+  cursor: default;
+
+  &__title,
+  &__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+    text-transform: none;
+  }
+
+  &__items {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    
+    &Sum {
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+
+  &__buttons {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 16px auto;
+    width: 140px;
+    height: 45px;
+    border: none;
+    box-shadow: 0 0 5px #d1d7d7;
+    background-color: #fff;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 15px #d1d7d7;
+      border-radius: 5px;
+      background-color: #d1d7d7;
+    }
+
+    &:active {
+      background-color: #000;
+    }
+  }
+
+  &__button.Check-button{
+    background-color: #5ece7b;
+
+    &:hover {
+      background-color: #34b958;
+    }
+    
+  }
+
+  &__button p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000;
+
+    &:active {
+      color: #fff;
+    }
+  }
+
+  &__button.Check-button p {
+    color: #fff;
+  }
+
+}
+
+.Infobar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__brand,
+  &__name {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  &__name {
+    margin-top: 5px;
+  }
+
+  &__price {
+    margin-top: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: uppercase;
+  }
+  
+  &__attributes {
+    margin-top: 10px;
+  }
+}
+
+.Unit:first-of-type {
+  margin-top: 32px;
+}
+
+
+.Unit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: fit-content;
+  margin-top: 30px;
+  padding: 0 0 2px 2px;
+  gap: 18px;
+
+  &__countAndGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__count {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  &__count button {
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border: 1px solid #1d1f22;
+    cursor: pointer;
+  }
+
+  &__gallery {
+    width: 120px;
+    position: relative;
+  }
+
+  &__gallery img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

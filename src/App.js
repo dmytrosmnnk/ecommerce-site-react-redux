@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import './App.scss';
+import { Layout } from './components/Layout/Layout';
+import { CatalogAllQuery } from './components/Catalog/CatalogAllQuery';
+import { ClothesQuery } from './components/Catalog/ClothesQuery';
+import { TechQuery } from './components/Catalog/TechQuery';
+import { NotFound } from './components/Catalog/NotFound';
+import { CartWrapper } from './components/Cart';
+import { ProductPageWrapper } from './components/ProductPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className='App'>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route path='all' element={<CatalogAllQuery />} />
+            <Route path='all/:id' element={<ProductPageWrapper />} />
+            <Route path='clothes' element={<ClothesQuery />} />
+            <Route path='clothes/:id' element={<ProductPageWrapper />} />
+            <Route path='tech' element={<TechQuery />} />
+            <Route path='tech/:id' element={<ProductPageWrapper />} />
+            <Route path='cart' element={<CartWrapper />} />
+            <Route path='/' element={<Navigate replace to='/all' />} />
+            <Route path='/home' element={<Navigate replace to='/all' />} />
+            <Route
+              path='entry-react-dev-test'
+              element={<Navigate replace to='/all' />}
+            />
+            <Route path='*' element={<NotFound />} />
+          </Route>
+        </Routes>
+      </div>
+    );
+  }
 }
 
 export default App;

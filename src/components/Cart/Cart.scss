@@ -1,0 +1,190 @@
+.Cart {
+  margin-top: 80px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #e5e5e5;
+
+  }
+
+  &__info {
+    margin-top: 32px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    
+    &Bold {
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    &__quantity,
+    &__total {
+      margin-top: 8px;
+    }
+  }
+
+  &__button,
+  .ClearButton {
+    margin-top: 16px;
+    padding: 16px 32px;
+    width: 280px;
+    height: 45px;
+    border: none;
+    box-shadow: 0 0 10px #d1d7d7;
+  }
+
+  &__button {
+    background-color: #5ece7b;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #34b958;
+      box-shadow: 0 0 30px #d1d7d7;
+      border-radius: 5px;
+    }
+
+    &:active {
+      background-color: #000;
+    }
+  }
+
+  &__button p,
+  .ClearButton p {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    
+  }
+
+  &__button p {
+    color: #fff;
+  }
+}
+
+.Item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: fit-content;
+  padding: 24px 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  &__countAndGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__count {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 160%;
+  }
+
+  &__count button {
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    border: 1px solid #1d1f22;
+    cursor: pointer;
+  }
+
+  &__gallery {
+    position: relative;
+    width: 200px;
+
+    &Buttons {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      width: 56px;
+    }
+
+    &Buttons button {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      background-color: #000;
+      opacity: 0.73;
+      border: none;
+      cursor: pointer;
+    }
+
+    &Buttons button span {
+      display: block;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  &__gallery img {
+    width: 100%;
+  }
+}
+
+.InfoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__brand,
+  &__name {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 27px;
+  }
+
+  &__name {
+    margin-top: 15px;
+    font-weight: 400;
+  }
+
+  &__attributes {
+    margin-top: 40px;
+  }
+
+  &__price {
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+}
+
+.ClearButton {
+  display: block;
+  background: #fff;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #d1d7d7;
+    box-shadow: 0 0 30px #d1d7d7;
+    border-radius: 5px;
+  }
+
+  &:active {
+    background-color: #000;
+    color: #fff;
+  }
+}

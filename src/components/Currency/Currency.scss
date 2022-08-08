@@ -1,0 +1,38 @@
+.CurrencySelecter {
+  position: relative;
+
+  &__button {
+    background-color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__item {
+    list-style-type: none;
+    padding: 8px 20px;
+    
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &__button,
+  &__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+  }
+
+  &__list {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 30px #eee;
+    cursor: pointer;
+  }
+
+  &__mark {
+    margin-left: 10px;
+    font: small-caption;
+  }
+}

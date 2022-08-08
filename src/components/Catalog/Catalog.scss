@@ -1,0 +1,109 @@
+$item-padding: 10px 15px 15px;
+$item-height: 444px;
+$item-width: 386px;
+$photo-height: 338px;
+$photo-width: 356px;
+$list-gap: 100px 40px;
+
+.Catalog {
+  margin-top: 80px;
+
+  &__title {
+    font-size: 42px;
+    line-height: 160%;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  &__list {
+    margin-top: 100px;
+    display: flex;
+    gap: $list-gap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 1435px) {
+      justify-content: space-evenly;
+    }
+    
+    @media screen and (max-width: 1020px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding: $item-padding;
+    height: $item-height;
+    width: $item-width;
+    list-style-type: none;
+    background: #fff;
+    box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+
+    &Photo {
+      height: 340px;
+      width: 355px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &Photo.outofStock {
+      opacity: 0.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: 'out of stock';
+        font-size: 24px;
+        line-height: 160%;
+        color: #8d8f9a;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+
+    &Name {
+      margin-top: 20px;
+      align-self: start;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 160%;
+      color: #1D1F22;
+    }
+
+    &Name.outofStock,
+    &Price.outofStock {
+      color: #8D8F9A;
+    }
+
+    &Price {
+      align-self: start;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 160%;
+      color: #1D1F22;
+    }
+  }
+
+  &__addButton {
+    position: absolute;
+    bottom: 72px;
+    right: 31px;
+    height: 52px;
+    width: 52px;
+    background-position: center;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-color: #5ece7b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+  }
+}

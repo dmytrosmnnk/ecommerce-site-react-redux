@@ -1,0 +1,58 @@
+.Attribute:not(:first-of-type) {
+  margin-top: 25px;
+}
+
+.Attribute {
+  &__name {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &__itemValue {
+    width: 63px;
+    height: 45px;
+    border: 1px solid #1d1f22;
+    box-shadow: 0 0 10px #d1d7d7;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__itemValue p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  &__itemValue.activeItem {
+    background-color: #000;
+    color: #fff;
+  }
+
+  &__itemValue.swatch {
+    width: 32px;
+    height: 32px;
+    border: none;
+  }
+
+  &__itemValue.swatch.activeSwatch {
+    outline: 1px solid #5ece7b;
+    outline-offset: 2px;
+  }
+}
