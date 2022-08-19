@@ -25,7 +25,7 @@ class App extends React.Component {
             <Route path='/' element={<Navigate replace to='/all' />} />
             <Route path='/home' element={<Navigate replace to='/all' />} />
             <Route
-              path='entry-react-dev-test'
+              path='ecommerce-site-react-redux'
               element={<Navigate replace to='/all' />}
             />
             <Route path='*' element={<NotFound />} />
